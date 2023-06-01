@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Game.Commands
 {
-    public class RecolorCommand : BaseCommand<Color>
+    public class RecolorCommand : BaseCommand
     {
         [SerializeField] private Renderer _target;
+        [SerializeField] private Color _toValue;
         
         public override async UniTask ExecuteAsync()
         {

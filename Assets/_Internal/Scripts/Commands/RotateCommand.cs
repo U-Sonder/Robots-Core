@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Game.Commands
 {
-    public class RotateCommand : BaseCommand<Vector3>
+    public class RotateCommand : BaseCommand
     {
         [SerializeField] private Transform _target;
+        [SerializeField] private Vector3 _toValue;
         
         public override async UniTask ExecuteAsync()
         {

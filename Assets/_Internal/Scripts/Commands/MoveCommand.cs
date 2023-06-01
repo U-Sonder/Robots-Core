@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Game.Commands
 {
-    public class MoveCommand : BaseCommand<Vector3>
+    public class MoveCommand : BaseCommand
     {
         [SerializeField] private Transform _target;
+        [SerializeField] private Vector3 _toValue;
         
         public override async UniTask ExecuteAsync()
         {
