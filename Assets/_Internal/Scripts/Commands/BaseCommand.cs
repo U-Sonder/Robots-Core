@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -9,6 +10,6 @@ namespace Game.Commands
     {
         [SerializeField, Min(0.0f)] protected float _duration;
 
-        public abstract UniTask ExecuteAsync();
+        public abstract UniTask ExecuteAsync(CancellationToken token);
     }
 }

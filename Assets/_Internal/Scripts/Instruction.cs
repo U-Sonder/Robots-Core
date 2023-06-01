@@ -1,3 +1,4 @@
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Commands;
 using UnityEngine;
@@ -16,9 +17,10 @@ namespace Game
 
         public async UniTask ExecuteAsync()
         {
+            var token = this.GetCancellationTokenOnDestroy();
             foreach (var command in _commands)
             {
-                await command.ExecuteAsync();
+                await command.ExecuteAsync(token);
             }
         }
     }
