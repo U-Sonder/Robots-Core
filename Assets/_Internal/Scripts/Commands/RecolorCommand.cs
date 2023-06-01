@@ -9,7 +9,7 @@ namespace Game.Commands
     {
         [SerializeField] private Renderer _target;
         [SerializeField] private Color _toValue;
-        
+
         public override async UniTask ExecuteAsync(CancellationToken token)
         {
             // Not best way of change color for material, because it creates new unshared material everytime

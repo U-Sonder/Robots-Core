@@ -1,4 +1,3 @@
-using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Commands;
 using UnityEngine;

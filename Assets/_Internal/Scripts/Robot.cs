@@ -1,4 +1,3 @@
-using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -17,6 +16,7 @@ namespace Game
             }
         }
 
+        [ContextMenu("Execute")]
         private void Execute()
         {
             ExecuteInstructionsAsync().Forget();
