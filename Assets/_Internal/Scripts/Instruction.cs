@@ -9,11 +9,10 @@ namespace Game
         [SerializeField] private BaseCommand[] _commands;
 
         [ContextMenu("Execute")]
-        public void Execute()
+        private void Execute()
         {
             ExecuteAsync().Forget();
         }
-        
 
         public async UniTask ExecuteAsync()
         {
